@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>SpongeBob's Krusty Krab Restaurant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="dark-theme">
+    <header>
+        <h1>SpongeBob's Krusty Krab Restaurant</h1>
+    </header>
+    <div class="gif-container">
+        <img src="loadingspongebob.gif" id="loader"></img>
+    </div>
+
+    <div class="container">
+        <div id="menu"></div>
+        <div id="order-summary">
+            <h3>Current Order Summary:</h3>
+            <p>Empty Order</p>
+        </div>
+        <form id="order-form">
+            <button type="button" id="get-last-order-button" onclick="displayLatestOrder()">Get Last Order</button>
+            <button type="submit" id="submit-button">Submit Order</button>
+        </form>
+
+
+
+    </div>
+
+    <div id="latest-order-info">
+        <h3>Most Recent Order</h3><br>
+        <p>Not Found.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
