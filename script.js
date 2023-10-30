@@ -26,7 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
     summaryHeader.textContent = 'Order Summary:'
     orderSummary.appendChild(summaryHeader)
     const emptyOrder = document.createElement('p')
-    summaryHeader.textContent = 'Empty Order'
+    emptyOrder.id = 'empty-order';
+    emptyOrder.textContent = 'Empty Order'
 
     // Calculate the total price of the items ordered
     items.forEach(item => {
