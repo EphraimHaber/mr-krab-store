@@ -2,6 +2,7 @@ from flask import Flask, jsonify, request
 from flask_cors import CORS
 import jsonschema
 from jsonschema import validate
+import asyncio
 
 app = Flask(__name__)
 CORS(app, origins='*')
@@ -62,9 +63,15 @@ def is_valid_list(items: list) -> bool:
     return True
 
 
-@app.route('/menu')
-def get_menu():
+async def get_menu_with_delay():
+    await asyncio.sleep(5)  # Sleep for 5 seconds
     return jsonify({'items': menu})
+
+
+@app.route('/menu', methods=['GET'])
+async def get_menu():
+    menu = await get_menu_with_delay()
+    return menu
 
 
 @app.route('/orders', methods=['POST'])

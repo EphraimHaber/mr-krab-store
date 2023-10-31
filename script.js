@@ -135,9 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Load the menu when the page loads
   loadMenu().then(() => {
-    setTimeout(() => {
-      loader.style.display = "none";
-    }, 2000);
+    loader.style.display = "none";
   });
 });
 
